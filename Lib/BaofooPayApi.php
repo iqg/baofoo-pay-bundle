@@ -29,15 +29,9 @@ class BaofooPayApi
      * @Param  $public_key_path 宝付公钥证书路径,要绝对路径（cer）
      * @Param  $private_key_password 证书密码
      */
-//    public function __construct($member_id, $terminal_id, $data_type, $private_key_path,$public_key_path,$private_key_password,$debug= false){
-//    public function __construct( ContainerInterface $container, $member_id, $terminal_id,$public_key_path, $private_key_path,$private_key_password,$data_type='json',$debug= false )
     public function __construct( ContainerInterface $container, $wxpayConfig )
     {
         $this->container = $container;
-        $this -> member_id = $member_id;
-        $this -> terminal_id = $terminal_id;
-        $this -> data_type = $data_type;
-
         $rootPath = $container->get('kernel')->getRootDir();
 
         $this->member_id              = isset($wxpayConfig['member_id']) ? $wxpayConfig['member_id'] : null;
@@ -62,7 +56,7 @@ class BaofooPayApi
         $this->public_key = openssl_get_publickey($keyFile);
 
         if($this->debug){
-            echo '会员号：', $member_id, "终端号：", $terminal_id, "\n";
+            echo '会员号：', $this->member_id, "终端号：", $this->terminal_id, "\n";
             echo "公钥路径：", $public_key_path, "\n";
             echo "私钥是否可用:", empty($private_key) == true ? '不可用':'可用', "\n";
             echo "宝付公钥是否可用:", empty($this -> public_key) == true ? '不可用':'可用', "\n\n".PHP_EOL;
