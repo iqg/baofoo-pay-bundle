@@ -1,0 +1,16 @@
+services:
+    baofoopay.handler:
+        class: iqg\BaofooPayBundle\Lib\BaofooPayApi
+        arguments: [@service_container, %baofoopay_config%]
+#    wxpay.handler:
+#        class: iqg\WxPayBundle\Lib\WxPayApi
+#        arguments: [@service_container, %wxpay_config%]
+#    wxpay.public.handler:
+#        class: iqg\WxPayBundle\Lib\WxPayApi
+#        arguments: [@service_container, %wxpay_public_config%]
+#    wxpay_notify.handler:
+#        class: iqg\WxPayBundle\Lib\WxPayNotify
+#        arguments: [@service_container, %wxpay_config%]
+#    wxpay_notify.public.handler:
+#        class: iqg\WxPayBundle\Lib\WxPayNotify
+#        arguments: [@service_container, %wxpay_public_config%]

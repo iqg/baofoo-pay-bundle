@@ -1,0 +1,16 @@
+{
+    "name": "iqg/baofoo-pay-bundle",
+    "description": "baofoo pay php sdk bundle for symfony 2",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wangpengpeng",
+            "email": "1215303889@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "iqg\\BaofooPayBundle": "" }
+    },
+    "target-dir": "iqg/BaofooPayBundle"
+}
