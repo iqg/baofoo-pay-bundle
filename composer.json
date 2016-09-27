@@ -1,6 +1,6 @@
 {
     "name": "dwddevops/baofoo-pay-bundle",
-    "description": "baofoo pay php sdk bundle for symfony 2",
+    "description": "baofoo pay php sdk bundle for symfony2",
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
