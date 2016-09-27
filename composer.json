@@ -1,5 +1,5 @@
 {
-    "name": "iqg/baofoo-pay-bundle",
+    "name": "dwddevops/baofoo-pay-bundle",
     "description": "baofoo pay php sdk bundle for symfony 2",
     "type": "symfony-bundle",
     "license": "MIT",
