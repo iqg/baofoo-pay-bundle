@@ -1,6 +1,6 @@
 <?php
 
-namespace iqg\BaofooPayBundle;
+namespace dwddevops\BaofooPayBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
