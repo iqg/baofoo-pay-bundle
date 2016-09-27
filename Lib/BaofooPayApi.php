@@ -1,10 +1,10 @@
 <?php
 
-namespace iqg\BaofooPayBundle\Lib;
+namespace dwddevops\BaofooPayBundle\Lib;
 use Symfony\Component\DependencyInjection\ContainerInterface as Container;
 
-use  iqg\BaofooPayBundle\Lib\TransContent;
-use  iqg\BaofooPayBundle\Lib\TransDataUtils;
+use  dwddevops\BaofooPayBundle\Lib\TransContent;
+use  dwddevops\BaofooPayBundle\Lib\TransDataUtils;
 
 define("BAOFOO_ENCRYPT_LEN", 32);
 

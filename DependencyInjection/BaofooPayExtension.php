@@ -1,6 +1,6 @@
 <?php
 
-namespace iqg\BaofooPayBundle\DependencyInjection;
+namespace dwddevops\BaofooPayBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

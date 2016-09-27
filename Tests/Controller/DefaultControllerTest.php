@@ -1,6 +1,6 @@
 <?php
 
-namespace iqg\BaofooPayBundle\Tests\Controller;
+namespace dwddevops\BaofooPayBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
