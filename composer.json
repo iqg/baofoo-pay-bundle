@@ -10,7 +10,7 @@
         }
     ],
     "autoload": {
-        "psr-0": { "iqg\\BaofooPayBundle": "" }
+        "psr-0": { "dwddevops\\BaofooPayBundle": "" }
     },
-    "target-dir": "iqg/BaofooPayBundle"
+    "target-dir": "dwddevops/BaofooPayBundle"
 }
