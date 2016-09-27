@@ -1,10 +1,7 @@
 <?php
-
 namespace dwddevops\BaofooPayBundle\Lib;
 use Symfony\Component\DependencyInjection\ContainerInterface as Container;
-
-use  dwddevops\BaofooPayBundle\Lib\TransContent;
-use  dwddevops\BaofooPayBundle\Lib\TransDataUtils;
+use dwddevops\BaofooPayBundle\Lib\TransContent;
 
 define("BAOFOO_ENCRYPT_LEN", 32);
 
@@ -29,7 +26,7 @@ class BaofooPayApi
      * @Param  $public_key_path 宝付公钥证书路径,要绝对路径（cer）
      * @Param  $private_key_password 证书密码
      */
-    public function __construct( ContainerInterface $container, $wxpayConfig )
+    public function __construct( Container $container, $wxpayConfig )
     {
         $this->container = $container;
         $rootPath = $container->get('kernel')->getRootDir();
@@ -79,6 +76,10 @@ class BaofooPayApi
 
     }
 
+    public function _array2JsonEncode($array)
+    {
+        return json_encode($array,JSON_UNESCAPED_UNICODE);
+    }
     // 私钥加密
     private function encryptedByPrivateKey($data_content){
 
@@ -155,7 +156,7 @@ class BaofooPayApi
         $trans_content = new TransContent();
         $trans_content -> __set("trans_content", $trans_content0 -> __getTransContent());
 
-        $data_content = TransDataUtils :: __array2Json($trans_content -> __getTransContent());
+        $data_content = $this-> _array2JsonEncode($trans_content -> __getTransContent());
 
         $data_content = str_replace("\\\"",'"',$data_content);
 
@@ -185,7 +186,7 @@ class BaofooPayApi
         $trans_content = new TransContent();
         $trans_content -> __set("trans_content", $trans_content0 -> __getTransContent());
 
-        $data_content = TransDataUtils :: __array2Json($trans_content->__getTransContent());
+        $data_content = $this-> _array2JsonEncode($trans_content->__getTransContent());
         $data_content = str_replace("\\\"",'"',$data_content);
 
         return $data_content;
