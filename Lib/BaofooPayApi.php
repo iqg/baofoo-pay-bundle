@@ -120,7 +120,9 @@ class BaofooPayApi
 
     function post($encrypted,$request_url){
 
-//		echo "发送地址：",$request_url,"<br>";
+        if($this->debug){
+		  echo "发送地址：" .$request_url. PHP_EOL;
+        }
         $postData = array(
             "member_id" => $this->member_id,
             "terminal_id" => $this->terminal_id,
