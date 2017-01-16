@@ -1,4 +1,4 @@
 services:
     baofoopay.handler:
         class: dwddevops\BaofooPayBundle\Lib\BaofooPayApi
-        arguments: [@service_container, %baofoopay_config%]
+        arguments: ['@service_container', %baofoopay_config%]
